@@ -8,7 +8,9 @@
         "jsx": "react"
     },
     "files": [
-        "./src/components/Hello.tsx",
+        "./src/components/Layout.tsx",
+        "./src/components/Footer.tsx",
+        "./src/components/Header.tsx",
         "./src/index.tsx"
     ]
 }

@@ -1,9 +1,22 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import { Hello } from "./components/Hello";
+import {
+    Router,
+    Route,
+    Redirect,
+    Link,
+    browserHistory
+} from 'react-router';
 
+import Layout from "./components/Layout"
+
+const appElement: Element = document.getElementById('app');
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById("example")
+    <Router history={browserHistory}>
+        <Route path="home" component={Layout}>
+        </Route>
+        <Redirect path="*" to="home" />
+    </Router>,
+    appElement
 );
