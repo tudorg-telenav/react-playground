@@ -35,6 +35,7 @@ export default class Layout extends React.Component<LayoutProps, LayoutState> {
         return (
             <div>
                 {this.state.isHeaderVisible ? <Header toggleFooter={this.toggleFooter.bind(this)} title={this.state.title} /> : null}
+                {this.props.children}
                 {this.state.isFooterVisible ? <Footer /> : null}
             </div>
         );

@@ -11,6 +11,8 @@
         "./src/components/Layout.tsx",
         "./src/components/Footer.tsx",
         "./src/components/Header.tsx",
+        "./src/components/Home.tsx",
+        "./src/components/Settings.tsx",
         "./src/index.tsx"
     ]
 }

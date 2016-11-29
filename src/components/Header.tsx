@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Link } from 'react-router';
+
 interface HeaderProps {
     title: string,
     toggleFooter: () => void
@@ -17,6 +19,8 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
             <div>
                 <h1>{this.props.title}</h1>
                 <button onClick={this.handleToggleClick.bind(this)}>Toggle</button>
+                <Link to="home"><button>home</button></Link>
+                <Link to="settings"><button>settings</button></Link>
             </div>
         );
     }

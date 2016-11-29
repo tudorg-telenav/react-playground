@@ -6,17 +6,22 @@ import {
     Route,
     Redirect,
     Link,
-    browserHistory
+    hashHistory
 } from 'react-router';
 
-import Layout from "./components/Layout"
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import Settings from "./components/Settings";
 
 const appElement: Element = document.getElementById('app');
 ReactDOM.render(
-    <Router history={browserHistory}>
-        <Route path="home" component={Layout}>
+    <Router history={hashHistory}>
+        <Route path="/" component={Layout}>
+            <Route path="home" component={Home}></Route>
+            <Route path="settings" component={Settings}></Route>
+            // <Redirect path="*" to="home" />
+            <Route path="*" component={Home}/>
         </Route>
-        <Redirect path="*" to="home" />
     </Router>,
     appElement
 );
